@@ -1,0 +1,13 @@
+# Showcase fork only (never part of an upstream pull request).
+version: 1
+app:
+  install: "npm ci"
+  start: npx vite --host 0.0.0.0 --port {port}
+  url: http://localhost:{port}
+  readyPath: /
+  runtime: node24
+  env:
+    NODE_ENV: development
+demo:
+  maxVideos: 1
+  beforePass: true
